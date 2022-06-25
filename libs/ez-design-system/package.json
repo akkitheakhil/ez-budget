@@ -1,6 +1,24 @@
 {
   "name": "@codewithakhil-io/ez-designs",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "homepage": "https://github.com/akkitheakhil/ez-budget",
+  "author": "Akhil Padmanabhan Nair (https://github.com/akkitheakhil)",
+  "license": "MIT",
+  "keywords": [
+    "ng",
+    "angular",
+    "design system components",
+    "ez-designs",
+    "ez-budget",
+    "ez-budget-app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akkitheakhil/ez-budget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akkitheakhil/ez-budget/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
