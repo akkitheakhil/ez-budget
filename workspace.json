@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "ez-budget": "apps/ez-budget",
+    "ez-design-system": "libs/ez-design-system"
+  }
 }

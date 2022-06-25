@@ -1,0 +1,75 @@
+{
+  "projectType": "library",
+  "root": "libs/ez-design-system",
+  "sourceRoot": "libs/ez-design-system/src",
+  "prefix": "ezds",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/ez-design-system"],
+      "options": {
+        "project": "libs/ez-design-system/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ez-design-system/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ez-design-system/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/ez-design-system/src/test.ts",
+        "tsConfig": "libs/ez-design-system/tsconfig.spec.json",
+        "karmaConfig": "libs/ez-design-system/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ez-design-system/src/**/*.ts",
+          "libs/ez-design-system/src/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/ez-design-system/.storybook"
+        },
+        "projectBuildConfig": "ez-design-system:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/ez-design-system",
+        "config": {
+          "configFolder": "libs/ez-design-system/.storybook"
+        },
+        "projectBuildConfig": "ez-design-system:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

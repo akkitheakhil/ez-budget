@@ -1,0 +1,45 @@
+.ezds-button {
+  font-weight: 700;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+
+  &--primary {
+    color: #fafe83;
+    background-color: #222222;
+  }
+
+  &--secondary {
+    color: #222222;
+    background-color: #fafe83;
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+
+  &--large {
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  &--full {
+    font-size: 16px;
+    width: 100%;
+    padding: 16px 32px;
+  }
+
+  &:hover, &:focus {
+    opacity: 0.8;
+    transition: opacity 200 ease;
+  }
+
+}
